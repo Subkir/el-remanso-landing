@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terreno con Proyecto Aprobado — Barrio El Remanso, San Martín de los Andes</title>
+<meta name="description" content="Lote con proyecto aprobado listo para construir en Barrio El Remanso, San Martín de los Andes. Estudios completos incluidos. Vistas al Volcán Lanín.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0c0f0a;
+  --bg-secondary: #151a12;
+  --bg-card: #1a2016;
+  --bg-accent: #232b1e;
+  --text-primary: #f0ece4;
+  --text-secondary: #a8a295;
+  --text-muted: #6b665e;
+  --accent: #c8a45c;
+  --accent-hover: #dbb96f;
+  --accent-dim: rgba(200,164,92,0.15);
+  --green-soft: #5a7a4a;
+  --green-dim: rgba(90,122,74,0.2);
+  --border: rgba(240,236,228,0.08);
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --max-w: 1200px;
+  --section-pad: clamp(80px, 12vw, 160px);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--accent); text-decoration: none; transition: color 0.3s; }
+a:hover { color: var(--accent-hover); }
+
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+
+/* ─── LANG TOGGLE ─── */
+.lang-toggle {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  background: rgba(12,15,10,0.7);
+}
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+.lang-btn.active {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+/* ─── WHATSAPP FLOAT ─── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 32px rgba(37,211,102,0.5);
+}
+.whatsapp-float svg { width: 30px; height: 30px; fill: #fff; }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: clamp(60px, 10vw, 120px);
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 30%, rgba(12,15,10,0.5) 60%, var(--bg-primary) 100%),
+    linear-gradient(135deg, rgba(90,122,74,0.15) 0%, transparent 50%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%25" stop-color="%23283040"/><stop offset="40%25" stop-color="%23405060"/><stop offset="70%25" stop-color="%23708090"/><stop offset="100%25" stop-color="%23a0b0b8"/></linearGradient><linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%25" stop-color="%233a4a3a"/><stop offset="100%25" stop-color="%232a3a2a"/></linearGradient><linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%25" stop-color="%234a5a4a"/><stop offset="100%25" stop-color="%23354535"/></linearGradient><linearGradient id="forest" x1="0" y1="0" x2="0" y2="1"><stop offset="0%25" stop-color="%23253525"/><stop offset="100%25" stop-color="%231a2a1a"/></linearGradient></defs><rect fill="url(%23sky)" width="1440" height="900"/><polygon fill="url(%23mtn1)" points="0,350 200,200 450,320 700,180 900,280 1100,150 1300,250 1440,200 1440,600 0,600"/><polygon fill="%23e8e8f0" points="650,185 700,180 720,195" opacity="0.8"/><polygon fill="%23e0e0e8" points="1060,155 1100,150 1130,170" opacity="0.7"/><polygon fill="url(%23mtn2)" points="0,420 150,350 400,430 600,340 850,400 1050,310 1250,380 1440,330 1440,650 0,650"/><polygon fill="url(%23forest)" points="0,520 100,480 250,510 400,470 550,500 700,460 850,490 1000,455 1150,485 1300,450 1440,480 1440,900 0,900"/><ellipse fill="%23506878" cx="720" cy="720" rx="500" ry="60" opacity="0.3"/></svg>');
+  background-size: cover;
+  background-position: center;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(200,164,92,0.3);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 32px;
+  animation: fadeUp 1s ease 0.3s both;
+}
+.hero-badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 7vw, 88px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 900px;
+  animation: fadeUp 1s ease 0.5s both;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+.hero-sub {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--text-secondary);
+  margin-top: 28px;
+  max-width: 560px;
+  line-height: 1.6;
+  animation: fadeUp 1s ease 0.7s both;
+}
+.hero-cta {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeUp 1s ease 0.9s both;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  text-transform: uppercase;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(200,164,92,0.3);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── VALUE BAR ─── */
+.value-bar {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 48px 0;
+}
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.value-item {
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+.value-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: var(--border);
+}
+.value-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  border-radius: 12px;
+  background: var(--accent-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 20px;
+}
+.value-item h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.value-item p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ─── SECTIONS ─── */
+section {
+  padding: var(--section-pad) 0;
+}
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 300;
+  line-height: 1.1;
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+.section-desc {
+  font-size: 17px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+/* ─── PROPERTY SPECS ─── */
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2px;
+}
+.spec-card {
+  background: var(--bg-card);
+  padding: 36px 32px;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+.spec-card:hover { background: var(--bg-accent); }
+.spec-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.spec-value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.spec-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+/* ─── PROJECT / CHECKLIST ─── */
+.project-section {
+  background: var(--bg-secondary);
+}
+.project-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+.check-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border-radius: 4px;
+  border-left: 3px solid var(--accent);
+  transition: transform 0.3s;
+}
+.check-list li:hover { transform: translateX(4px); }
+.check-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--green-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-soft);
+  font-size: 14px;
+  margin-top: 2px;
+}
+.check-text strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.check-text span {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.savings-box {
+  margin-top: 32px;
+  padding: 32px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(200,164,92,0.2);
+  border-radius: 6px;
+}
+.savings-box .big-num {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+.savings-box .big-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+.savings-box .big-sub {
+  font-size: 15px;
+  color: var(--text-primary);
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* ─── MAP SECTION ─── */
+.map-embed {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-top: 32px;
+  background: var(--bg-card);
+}
+.map-embed iframe { width: 100%; height: 100%; border: none; filter: grayscale(0.3) contrast(1.1); }
+.distances {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.distance-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+.distance-item .dist-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--green-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.distance-item .dist-text { font-size: 14px; }
+.distance-item .dist-text strong { display: block; font-weight: 600; }
+.distance-item .dist-text span { color: var(--text-muted); font-size: 12px; }
+
+/* ─── GALLERY PLACEHOLDER ─── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 280px 280px;
+  gap: 4px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.gallery-item {
+  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.gallery-item:hover { opacity: 0.85; }
+.gallery-item:first-child { grid-row: 1 / -1; }
+.gallery-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  background:
+    linear-gradient(135deg, var(--bg-card) 0%, var(--bg-accent) 100%);
+}
+.gallery-placeholder svg { opacity: 0.3; }
+
+/* ─── BARRIO INFO ─── */
+.barrio-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.barrio-card {
+  padding: 32px;
+  background: var(--bg-card);
+  border-radius: 6px;
+  border-top: 2px solid var(--accent);
+}
+.barrio-card h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.barrio-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ─── CONTACT ─── */
+.contact-section {
+  background: var(--bg-secondary);
+}
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: border-color 0.3s;
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--accent);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group select option { background: var(--bg-card); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.contact-info {
+  padding-top: 16px;
+}
+.contact-info h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.contact-info p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border-radius: 6px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.channel:hover { background: var(--bg-accent); }
+.channel-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.channel-icon.wa { background: rgba(37,211,102,0.15); color: #25d366; }
+.channel-icon.email { background: var(--accent-dim); color: var(--accent); }
+.channel-icon.phone { background: var(--green-dim); color: var(--green-soft); }
+.channel-text { font-size: 14px; }
+.channel-text strong { display: block; font-weight: 600; }
+.channel-text span { color: var(--text-muted); font-size: 12px; }
+
+/* ─── DOWNLOAD CTA ─── */
+.download-cta {
+  text-align: center;
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+}
+.download-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.download-cta p {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+.download-form {
+  display: flex;
+  gap: 12px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.download-form input {
+  flex: 1;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.download-form input:focus { border-color: var(--accent); }
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .value-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .value-item:not(:last-child)::after { display: none; }
+  .project-layout,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+  }
+  .gallery-item:first-child { grid-row: 1 / 2; }
+  .form-row { grid-template-columns: 1fr; }
+  .download-form { flex-direction: column; }
+  .lang-toggle { top: 12px; right: 12px; }
+}
+@media (max-width: 480px) {
+  .value-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 180px); }
+  .distances { grid-template-columns: 1fr; }
+}
+
+/* ─── ANIMATIONS ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- Language Toggle -->
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('es')">ES</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/54XXXXXXXXXX?text=Hola%2C%20me%20interesa%20el%20terreno%20en%20El%20Remanso" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ════════ HERO ════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <span data-es="Disponible ahora" data-en="Available now">Disponible ahora</span>
+    </div>
+    <h1>
+      <span data-es="Terreno con proyecto" data-en="Land with approved">Terreno con proyecto</span><br>
+      <em data-es="aprobado" data-en="building project">aprobado</em>
+      <span data-es=" en Patagonia" data-en=" in Patagonia"> en Patagonia</span>
+    </h1>
+    <p class="hero-sub" data-es="Barrio El Remanso, San Martín de los Andes. Listo para construir — con estudios de suelos, planos aprobados y vistas al Volcán Lanín." data-en="Barrio El Remanso, San Martín de los Andes. Ready to build — with soil studies, approved plans, and views of Volcán Lanín.">
+      Barrio El Remanso, San Martín de los Andes. Listo para construir — con estudios de suelos, planos aprobados y vistas al Volcán Lanín.
+    </p>
+    <div class="hero-cta">
+      <a href="#contacto" class="btn btn-primary" data-es="Consultar" data-en="Inquire">Consultar</a>
+      <a href="#proyecto" class="btn btn-outline" data-es="Ver proyecto" data-en="View project">Ver proyecto</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ VALUE BAR ════════ -->
+<div class="value-bar reveal">
+  <div class="container">
+    <div class="value-grid">
+      <div class="value-item">
+        <div class="value-icon">✓</div>
+        <h3 data-es="Proyecto Aprobado" data-en="Approved Project">Proyecto Aprobado</h3>
+        <p data-es="Planos municipales listos" data-en="Municipal plans ready">Planos municipales listos</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">📋</div>
+        <h3 data-es="Estudios Completos" data-en="Complete Studies">Estudios Completos</h3>
+        <p data-es="Suelos, efluentes, topografía" data-en="Soil, effluent, topography">Suelos, efluentes, topografía</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🏗</div>
+        <h3 data-es="Listo para Construir" data-en="Ready to Build">Listo para Construir</h3>
+        <p data-es="Empezá mañana mismo" data-en="Start building tomorrow">Empezá mañana mismo</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🏔</div>
+        <h3 data-es="Vistas al Volcán Lanín" data-en="Volcán Lanín Views">Vistas al Volcán Lanín</h3>
+        <p data-es="Entorno natural único" data-en="Unique natural setting">Entorno natural único</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ PROPERTY SPECS ════════ -->
+<section id="terreno" class="reveal">
+  <div class="container">
+    <div class="section-label" data-es="El terreno" data-en="The land">El terreno</div>
+    <h2 class="section-title" data-es="Datos del <em>lote</em>" data-en="Lot <em>specifications</em>">Datos del <em>lote</em></h2>
+    <p class="section-desc" data-es="Ubicado en Barrio El Remanso, a minutos del aeropuerto Chapelco y sobre Ruta Nacional 40. Servicios subterráneos, bosque de pinos, sin expensas." data-en="Located in Barrio El Remanso, minutes from Chapelco Airport on Ruta Nacional 40. Underground utilities, pine forest, no HOA fees.">
+      Ubicado en Barrio El Remanso, a minutos del aeropuerto Chapelco y sobre Ruta Nacional 40. Servicios subterráneos, bosque de pinos, sin expensas.
+    </p>
+
+    <div class="specs-grid">
+      <div class="spec-card">
+        <div class="spec-label" data-es="Superficie" data-en="Area">Superficie</div>
+        <div class="spec-value">XXX m²</div>
+        <div class="spec-note" data-es="Verificar medidas exactas" data-en="Verify exact measurements">Verificar medidas exactas</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label" data-es="Orientación" data-en="Orientation">Orientación</div>
+        <div class="spec-value">Norte</div>
+        <div class="spec-note" data-es="Máxima exposición solar" data-en="Maximum sun exposure">Máxima exposición solar</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label">FOS / FOT</div>
+        <div class="spec-value">XX% / XX%</div>
+        <div class="spec-note" data-es="Según normativa municipal" data-en="Per municipal regulations">Según normativa municipal</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label" data-es="Servicios" data-en="Utilities">Servicios</div>
+        <div class="spec-value" data-es="Subterráneos" data-en="Underground">Subterráneos</div>
+        <div class="spec-note" data-es="Electricidad, agua, gas proyectado" data-en="Electricity, water, projected gas">Electricidad, agua, gas proyectado</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label" data-es="Expensas" data-en="HOA fees">Expensas</div>
+        <div class="spec-value" data-es="Sin expensas" data-en="No HOA fees">Sin expensas</div>
+        <div class="spec-note" data-es="Solo impuestos provinciales" data-en="Provincial taxes only">Solo impuestos provinciales</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label" data-es="Estado legal" data-en="Legal status">Estado legal</div>
+        <div class="spec-value" data-es="Escritura" data-en="Title deed">Escritura</div>
+        <div class="spec-note" data-es="Título limpio, apto crédito" data-en="Clean title, mortgage eligible">Título limpio, apto crédito</div>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="map-embed">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000!2d-71.38!3d-40.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDEwJzEyLjAiUyA3McKwMjInNDguMCJX!5e0!3m2!1ses!2sar!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="distances">
+      <div class="distance-item">
+        <div class="dist-icon">✈️</div>
+        <div class="dist-text">
+          <strong data-es="Aeropuerto Chapelco" data-en="Chapelco Airport">Aeropuerto Chapelco</strong>
+          <span>5 min</span>
+        </div>
+      </div>
+      <div class="distance-item">
+        <div class="dist-icon">🏘</div>
+        <div class="dist-text">
+          <strong data-es="Centro SMA" data-en="SMA Downtown">Centro SMA</strong>
+          <span>20 min</span>
+        </div>
+      </div>
+      <div class="distance-item">
+        <div class="dist-icon">🛣</div>
+        <div class="dist-text">
+          <strong>Ruta Nacional 40</strong>
+          <span>400 m</span>
+        </div>
+      </div>
+      <div class="distance-item">
+        <div class="dist-icon">⛷</div>
+        <div class="dist-text">
+          <strong data-es="Cerro Chapelco" data-en="Chapelco Ski Resort">Cerro Chapelco</strong>
+          <span>25 min</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PROJECT ════════ -->
+<section id="proyecto" class="project-section reveal">
+  <div class="container">
+    <div class="project-layout">
+      <div>
+        <div class="section-label" data-es="El proyecto" data-en="The project">El proyecto</div>
+        <h2 class="section-title" data-es="Proyecto arquitectónico <em>aprobado</em>" data-en="Approved architectural <em>project</em>">Proyecto arquitectónico <em>aprobado</em></h2>
+        <p class="section-desc" data-es="Todo lo que necesitás para empezar a construir ya está listo. Ahorrá entre 6 y 12 meses de trámites municipales y más de $15.000 USD en costos de proyecto." data-en="Everything you need to start building is already done. Save 6–12 months of municipal procedures and over $15,000 USD in project costs.">
+          Todo lo que necesitás para empezar a construir ya está listo. Ahorrá entre 6 y 12 meses de trámites municipales y más de $15.000 USD en costos de proyecto.
+        </p>
+
+        <ul class="check-list">
+          <li>
+            <div class="check-icon">✓</div>
+            <div class="check-text">
+              <strong data-es="Planos arquitectónicos aprobados" data-en="Approved architectural plans">Planos arquitectónicos aprobados</strong>
+              <span data-es="Visados por la Municipalidad de SMA y el Colegio de Arquitectos de Neuquén" data-en="Endorsed by the Municipality of SMA and the Neuquén Architects' Association">Visados por la Municipalidad de SMA y el Colegio de Arquitectos de Neuquén</span>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <div class="check-text">
+              <strong data-es="Estudio de suelos" data-en="Soil study">Estudio de suelos</strong>
+              <span data-es="Análisis geotécnico completo para fundaciones" data-en="Complete geotechnical analysis for foundations">Análisis geotécnico completo para fundaciones</span>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <div class="check-text">
+              <strong data-es="Estudio de efluentes" data-en="Effluent study">Estudio de efluentes</strong>
+              <span data-es="Sistema de tratamiento aprobado" data-en="Approved treatment system">Sistema de tratamiento aprobado</span>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <div class="check-text">
+              <strong data-es="Relevamiento topográfico" data-en="Topographic survey">Relevamiento topográfico</strong>
+              <span data-es="Mensura y curvas de nivel del terreno" data-en="Survey and terrain contour lines">Mensura y curvas de nivel del terreno</span>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon">✓</div>
+            <div class="check-text">
+              <strong data-es="Cálculo estructural" data-en="Structural calculation">Cálculo estructural</strong>
+              <span data-es="Diseño de fundaciones y estructura resistente" data-en="Foundation and load-bearing structure design">Diseño de fundaciones y estructura resistente</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <!-- Render placeholder -->
+        <div style="background: var(--bg-card); border-radius: 8px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; color: var(--text-muted); margin-bottom: 24px; border: 1px dashed var(--border);">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span style="font-size:13px;" data-es="Render 3D del proyecto" data-en="3D project render">Render 3D del proyecto</span>
+        </div>
+
+        <div class="savings-box">
+          <div class="big-num">$15.000+</div>
+          <div class="big-label" data-es="USD en proyecto y estudios incluidos" data-en="USD in project and studies included">USD en proyecto y estudios incluidos</div>
+          <div class="big-sub" data-es="Obtener la aprobación municipal en San Martín de los Andes toma entre 4 y 12 meses. Con este lote, podés empezar a construir el día después de la escritura." data-en="Getting municipal approval in San Martín de los Andes takes 4–12 months. With this lot, you can start building the day after closing.">
+            Obtener la aprobación municipal en San Martín de los Andes toma entre 4 y 12 meses. Con este lote, podés empezar a construir el día después de la escritura.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ GALLERY ════════ -->
+<section id="galeria" class="reveal">
+  <div class="container">
+    <div class="section-label" data-es="Galería" data-en="Gallery">Galería</div>
+    <h2 class="section-title" data-es="El lugar donde vas a <em>vivir</em>" data-en="The place you'll call <em>home</em>">El lugar donde vas a <em>vivir</em></h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <span data-es="Video aéreo con drone" data-en="Aerial drone video">Video aéreo con drone</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span data-es="Vista al volcán" data-en="Volcano view">Vista al volcán</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span data-es="Bosque de pinos" data-en="Pine forest">Bosque de pinos</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <span data-es="Entorno del barrio" data-en="Neighborhood">Entorno del barrio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ BARRIO ════════ -->
+<section id="barrio" class="reveal">
+  <div class="container">
+    <div class="section-label" data-es="El barrio" data-en="The neighborhood">El barrio</div>
+    <h2 class="section-title" data-es="Barrio <em>El Remanso</em>" data-en="Barrio <em>El Remanso</em>">Barrio <em>El Remanso</em></h2>
+    <p class="section-desc" data-es="Un barrio residencial dentro del ecosistema El Desafío Mountain Resort, con naturaleza, infraestructura y comunidad." data-en="A residential neighborhood within the El Desafío Mountain Resort ecosystem, offering nature, infrastructure, and community.">
+      Un barrio residencial dentro del ecosistema El Desafío Mountain Resort, con naturaleza, infraestructura y comunidad.
+    </p>
+
+    <div class="barrio-features">
+      <div class="barrio-card">
+        <h3 data-es="Naturaleza" data-en="Nature">Naturaleza</h3>
+        <p data-es="Bosque de pinos, vistas al Volcán Lanín y Cordillera de los Andes. Reserva natural de 600 hectáreas como vecina." data-en="Pine forest, views of Volcán Lanín and the Andes Mountains. Adjacent 600-hectare nature reserve.">
+          Bosque de pinos, vistas al Volcán Lanín y Cordillera de los Andes. Reserva natural de 600 hectáreas como vecina.
+        </p>
+      </div>
+      <div class="barrio-card">
+        <h3 data-es="Infraestructura" data-en="Infrastructure">Infraestructura</h3>
+        <p data-es="Servicios subterráneos (electricidad, agua). Sin expensas mensuales — solo impuestos provinciales. Calles consolidadas." data-en="Underground utilities (electricity, water). No monthly HOA fees — provincial taxes only. Consolidated roads.">
+          Servicios subterráneos (electricidad, agua). Sin expensas mensuales — solo impuestos provinciales. Calles consolidadas.
+        </p>
+      </div>
+      <div class="barrio-card">
+        <h3 data-es="Comunidad" data-en="Community">Comunidad</h3>
+        <p data-es="Más de 15 casas construidas. Asociado al ecosistema El Desafío: golf (Greg Norman), polo, gastronomía y naturaleza." data-en="Over 15 homes built. Associated with the El Desafío ecosystem: golf (Greg Norman), polo, gastronomy, and nature.">
+          Más de 15 casas construidas. Asociado al ecosistema El Desafío: golf (Greg Norman), polo, gastronomía y naturaleza.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ DOWNLOAD CTA ════════ -->
+<div class="download-cta reveal">
+  <div class="container">
+    <h2 data-es="Descargá el dossier completo" data-en="Download the full dossier">Descargá el dossier completo</h2>
+    <p data-es="Planos, renders, estudios y toda la documentación del proyecto en un solo PDF." data-en="Plans, renders, studies, and all project documentation in a single PDF.">
+      Planos, renders, estudios y toda la documentación del proyecto en un solo PDF.
+    </p>
+    <div class="download-form">
+      <input type="email" placeholder="tu@email.com" required>
+      <button class="btn btn-primary" type="button" data-es="Descargar PDF" data-en="Download PDF">Descargar PDF</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ CONTACT ════════ -->
+<section id="contacto" class="contact-section reveal">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <div class="section-label" data-es="Contacto" data-en="Contact">Contacto</div>
+        <h2 class="section-title" data-es="¿Te interesa? <em>Hablemos.</em>" data-en="Interested? <em>Let's talk.</em>">¿Te interesa? <em>Hablemos.</em></h2>
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-es="Nombre" data-en="Name">Nombre</label>
+              <input type="text" placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label data-es="Teléfono" data-en="Phone">Teléfono</label>
+              <input type="tel" placeholder="+54 ...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="tu@email.com">
+          </div>
+          <div class="form-group">
+            <label data-es="¿Qué buscás?" data-en="What are you looking for?">¿Qué buscás?</label>
+            <select>
+              <option value="" data-es="Seleccioná una opción" data-en="Select an option">Seleccioná una opción</option>
+              <option value="compra" data-es="Quiero comprar" data-en="I want to buy">Quiero comprar</option>
+              <option value="info" data-es="Necesito más información" data-en="I need more info">Necesito más información</option>
+              <option value="visita" data-es="Quiero visitar el terreno" data-en="I want to visit the lot">Quiero visitar el terreno</option>
+              <option value="otro" data-es="Otro" data-en="Other">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-es="Mensaje" data-en="Message">Mensaje</label>
+            <textarea placeholder="" data-es-placeholder="Contanos qué te interesa..." data-en-placeholder="Tell us what you're interested in..."></textarea>
+          </div>
+          <button class="btn btn-primary" type="button" data-es="Enviar consulta" data-en="Send inquiry">Enviar consulta</button>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <h3 data-es="Respondemos en menos de 24 horas" data-en="We respond within 24 hours">Respondemos en menos de 24 horas</h3>
+        <p data-es="Escribinos por WhatsApp para una respuesta inmediata, o completá el formulario y te contactamos." data-en="Message us on WhatsApp for an instant reply, or fill out the form and we'll contact you.">
+          Escribinos por WhatsApp para una respuesta inmediata, o completá el formulario y te contactamos.
+        </p>
+        <div class="contact-channels">
+          <a href="https://wa.me/54XXXXXXXXXX" target="_blank" rel="noopener" class="channel">
+            <div class="channel-icon wa">💬</div>
+            <div class="channel-text">
+              <strong>WhatsApp</strong>
+              <span data-es="Respuesta inmediata" data-en="Instant reply">Respuesta inmediata</span>
+            </div>
+          </a>
+          <a href="mailto:tu@email.com" class="channel">
+            <div class="channel-icon email">✉</div>
+            <div class="channel-text">
+              <strong>Email</strong>
+              <span>tu@email.com</span>
+            </div>
+          </a>
+          <a href="tel:+54XXXXXXXXXX" class="channel">
+            <div class="channel-icon phone">📞</div>
+            <div class="channel-text">
+              <strong data-es="Teléfono" data-en="Phone">Teléfono</strong>
+              <span>+54 XXX XXX XXXX</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <div class="container">
+    <p>Barrio El Remanso — San Martín de los Andes, Neuquén, Argentina</p>
+  </div>
+</footer>
+
+<script>
+// ─── Language Toggle ───
+let currentLang = 'es';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+  });
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (val) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        // skip
+      } else {
+        el.innerHTML = val;
+      }
+    }
+  });
+  // Handle placeholders
+  document.querySelectorAll('[data-' + lang + '-placeholder]').forEach(el => {
+    el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
+  });
+  document.documentElement.lang = lang;
+}
+
+// ─── Scroll Reveal ───
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+reveals.forEach(el => observer.observe(el));
+
+// ─── Smooth anchor scrolling with offset ───
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const y = target.getBoundingClientRect().top + window.pageYOffset - 40;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>

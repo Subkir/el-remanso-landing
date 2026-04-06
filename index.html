@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terreno con Proyecto Aprobado — Barrio El Remanso, San Martin de los Andes</title>
+<meta name="description" content="Lote con proyecto aprobado listo para construir en Barrio El Remanso, San Martin de los Andes. Casa de 104 m² con estudios completos incluidos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0c0f0a;
+  --bg-secondary: #151a12;
+  --bg-card: #1a2016;
+  --bg-accent: #232b1e;
+  --text-primary: #f0ece4;
+  --text-secondary: #a8a295;
+  --text-muted: #6b665e;
+  --accent: #c8a45c;
+  --accent-hover: #dbb96f;
+  --accent-dim: rgba(200,164,92,0.15);
+  --green-soft: #5a7a4a;
+  --green-dim: rgba(90,122,74,0.2);
+  --border: rgba(240,236,228,0.08);
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --max-w: 1200px;
+  --section-pad: clamp(80px, 12vw, 160px);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--accent); color: var(--bg-primary); }
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-decoration: none; transition: color 0.3s; }
+a:hover { color: var(--accent-hover); }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+
+/* ─── STICKY NAV ─── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 14px 0;
+  background: rgba(12,15,10,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.4s, box-shadow 0.4s, padding 0.4s;
+}
+.nav.scrolled {
+  background: rgba(12,15,10,0.95);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  padding: 10px 0;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--font-display); font-size: 20px; font-weight: 500;
+  color: var(--text-primary); letter-spacing: 0.02em;
+}
+.nav-logo em { color: var(--accent); font-style: italic; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  letter-spacing: 0.03em; transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  font-size: 12px !important; padding: 8px 20px; border: 1px solid var(--accent);
+  border-radius: 4px; color: var(--accent) !important; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase; transition: all 0.3s;
+}
+.nav-cta:hover { background: var(--accent); color: var(--bg-primary) !important; }
+
+.lang-toggle {
+  display: flex; border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+}
+.lang-btn {
+  border: none; background: transparent; color: var(--text-muted);
+  font-family: var(--font-body); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.1em; padding: 6px 10px; cursor: pointer;
+  transition: all 0.3s; text-transform: uppercase;
+}
+.lang-btn.active { background: var(--accent-dim); color: var(--accent); }
+
+/* ─── HAMBURGER (mobile) ─── */
+.nav-hamburger {
+  display: none; background: none; border: none; cursor: pointer; padding: 4px;
+}
+.nav-hamburger span {
+  display: block; width: 22px; height: 2px; background: var(--text-primary);
+  margin: 5px 0; transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  .nav-hamburger { display: block; }
+  .nav-links {
+    position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
+    background: var(--bg-secondary); flex-direction: column; justify-content: center;
+    gap: 32px; transition: right 0.4s ease; padding: 40px;
+    box-shadow: -4px 0 30px rgba(0,0,0,0.5);
+  }
+  .nav-links.open { right: 0; }
+  .nav-links a { font-size: 16px; }
+  .mobile-overlay {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 998;
+  }
+  .mobile-overlay.show { display: block; }
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: flex-end;
+  padding-bottom: clamp(60px, 10vw, 120px); overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('Рендеры/Рендер фасад 2.jpeg');
+  background-size: cover; background-position: center 40%;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(12,15,10,0.2) 0%, rgba(12,15,10,0.4) 40%, var(--bg-primary) 95%);
+}
+.hero-content { position: relative; z-index: 2; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent-dim); border: 1px solid rgba(200,164,92,0.3);
+  border-radius: 100px; padding: 8px 20px; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: 32px; animation: fadeUp 1s ease 0.3s both;
+}
+.hero-badge::before {
+  content: ''; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.hero h1 {
+  font-family: var(--font-display); font-size: clamp(40px, 7vw, 88px);
+  font-weight: 300; line-height: 1.05; letter-spacing: -0.02em;
+  max-width: 900px; animation: fadeUp 1s ease 0.5s both;
+}
+.hero h1 em { font-style: italic; color: var(--accent); font-weight: 400; }
+.hero-sub {
+  font-size: clamp(16px, 2vw, 20px); color: var(--text-secondary);
+  margin-top: 28px; max-width: 560px; line-height: 1.6;
+  animation: fadeUp 1s ease 0.7s both;
+}
+.hero-cta {
+  margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;
+  animation: fadeUp 1s ease 0.9s both;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 32px; border-radius: 6px; font-family: var(--font-body);
+  font-size: 14px; font-weight: 600; letter-spacing: 0.04em;
+  cursor: pointer; transition: all 0.3s; border: none; text-transform: uppercase;
+}
+.btn-primary { background: var(--accent); color: var(--bg-primary); }
+.btn-primary:hover {
+  background: var(--accent-hover); color: var(--bg-primary);
+  transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200,164,92,0.3);
+}
+.btn-outline { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── VALUE BAR ─── */
+.value-bar { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 0; }
+.value-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.value-item { text-align: center; padding: 0 20px; position: relative; }
+.value-item:not(:last-child)::after {
+  content: ''; position: absolute; right: 0; top: 10%; height: 80%;
+  width: 1px; background: var(--border);
+}
+.value-icon {
+  width: 48px; height: 48px; margin: 0 auto 16px; border-radius: 12px;
+  background: var(--accent-dim); display: flex; align-items: center;
+  justify-content: center; color: var(--accent); font-size: 20px;
+}
+.value-item h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+.value-item p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+/* ─── SECTIONS ─── */
+section { padding: var(--section-pad) 0; }
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-display); font-size: clamp(32px, 5vw, 56px);
+  font-weight: 300; line-height: 1.1; max-width: 700px; margin-bottom: 24px;
+}
+.section-title em { font-style: italic; color: var(--accent); }
+.section-desc {
+  font-size: 17px; color: var(--text-secondary); max-width: 600px;
+  line-height: 1.7; margin-bottom: 48px;
+}
+
+/* ─── PROPERTY SPECS ─── */
+.specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px; }
+.spec-card { background: var(--bg-card); padding: 36px 32px; border-radius: 2px; transition: background 0.3s; }
+.spec-card:hover { background: var(--bg-accent); }
+.spec-label { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+.spec-value { font-family: var(--font-display); font-size: 28px; font-weight: 500; color: var(--text-primary); }
+.spec-note { font-size: 13px; color: var(--text-secondary); margin-top: 6px; }
+
+/* ─── PROJECT / CHECKLIST ─── */
+.project-section { background: var(--bg-secondary); }
+.project-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: start; }
+.check-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.check-list li {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 20px 24px; background: var(--bg-card); border-radius: 4px;
+  border-left: 3px solid var(--accent); transition: transform 0.3s;
+}
+.check-list li:hover { transform: translateX(4px); }
+.check-icon {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--green-dim); display: flex; align-items: center;
+  justify-content: center; color: var(--green-soft); font-size: 14px; margin-top: 2px;
+}
+.check-text strong { display: block; font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+.check-text span { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+.savings-box {
+  margin-top: 32px; padding: 32px; background: var(--accent-dim);
+  border: 1px solid rgba(200,164,92,0.2); border-radius: 6px;
+}
+.savings-box .big-num { font-family: var(--font-display); font-size: 48px; font-weight: 600; color: var(--accent); line-height: 1; }
+.savings-box .big-label { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+.savings-box .big-sub { font-size: 15px; color: var(--text-primary); margin-top: 16px; line-height: 1.6; }
+
+/* ─── GALLERY ─── */
+.gallery-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 300px 300px; gap: 4px; border-radius: 8px; overflow: hidden;
+}
+.gallery-item {
+  position: relative; overflow: hidden; cursor: pointer;
+}
+.gallery-item:first-child { grid-row: 1 / -1; }
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 16px 20px; font-size: 13px; font-weight: 500;
+  color: #fff; background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  opacity: 0; transition: opacity 0.3s;
+}
+.gallery-item:hover .gallery-caption { opacity: 1; }
+
+/* ─── FLOOR PLAN ─── */
+.floor-plan-section { background: var(--bg-secondary); }
+.floor-plan-wrapper {
+  background: #fff; border-radius: 8px; overflow: hidden;
+  padding: 24px; max-width: 900px; margin: 0 auto; cursor: pointer;
+}
+.floor-plan-wrapper img { width: 100%; height: auto; display: block; }
+
+/* ─── MAP SECTION ─── */
+.map-embed {
+  width: 100%; height: 400px; border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--border); margin-top: 32px; background: var(--bg-card);
+}
+.map-embed iframe { width: 100%; height: 100%; border: none; filter: grayscale(0.3) contrast(1.1); }
+.distances { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 24px; }
+.distance-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 20px; background: var(--bg-card); border-radius: 4px;
+}
+.distance-item .dist-icon {
+  width: 36px; height: 36px; border-radius: 8px; background: var(--green-dim);
+  display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;
+}
+.distance-item .dist-text { font-size: 14px; }
+.distance-item .dist-text strong { display: block; font-weight: 600; }
+.distance-item .dist-text span { color: var(--text-muted); font-size: 12px; }
+
+/* ─── BARRIO INFO ─── */
+.barrio-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; }
+.barrio-card { padding: 32px; background: var(--bg-card); border-radius: 6px; border-top: 2px solid var(--accent); }
+.barrio-card h3 { font-family: var(--font-display); font-size: 22px; font-weight: 500; margin-bottom: 12px; }
+.barrio-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+/* ─── FOOTER ─── */
+footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; font-size: 13px; color: var(--text-muted); }
+
+/* ─── LIGHTBOX ─── */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.95); align-items: center; justify-content: center;
+  cursor: zoom-out; animation: lbFade 0.3s ease;
+}
+.lightbox.active { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; }
+.lightbox-close {
+  position: absolute; top: 20px; right: 24px; background: none; border: none;
+  color: #fff; font-size: 32px; cursor: pointer; opacity: 0.7; transition: opacity 0.3s;
+}
+.lightbox-close:hover { opacity: 1; }
+@keyframes lbFade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .value-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .value-item:not(:last-child)::after { display: none; }
+  .project-layout, .contact-layout { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px 220px; }
+  .gallery-item:first-child { grid-row: 1 / 2; }
+  .form-row { grid-template-columns: 1fr; }
+  .download-form { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .value-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: repeat(5, 220px); }
+  .distances { grid-template-columns: 1fr; }
+}
+
+/* ─── SCROLL REVEAL ─── */
+.reveal {
+  animation: revealIn 0.8s ease both;
+}
+@keyframes revealIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.value-bar.reveal { animation-delay: 0.1s; }
+#galeria.reveal { animation-delay: 0.15s; }
+#terreno.reveal { animation-delay: 0.2s; }
+#proyecto.reveal { animation-delay: 0.25s; }
+</style>
+</head>
+<body>
+
+<!-- ════════ NAV ════════ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo"><em>El Remanso</em></a>
+    <div class="mobile-overlay" id="mobileOverlay" onclick="closeMenu()"></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#galeria" data-es="Galeria" data-en="Gallery" data-ru="Галерея" onclick="closeMenu()">Galeria</a>
+      <a href="#terreno" data-es="Terreno" data-en="Land" data-ru="Участок" onclick="closeMenu()">Terreno</a>
+      <a href="#proyecto" data-es="Proyecto" data-en="Project" data-ru="Проект" onclick="closeMenu()">Proyecto</a>
+      <a href="#barrio" data-es="Barrio" data-en="Neighborhood" data-ru="Район" onclick="closeMenu()">Barrio</a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- ════════ HERO ════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <span data-es="Disponible ahora" data-en="Available now" data-ru="В продаже">Disponible ahora</span>
+    </div>
+    <h1>
+      <span data-es="Terreno con proyecto" data-en="Land with approved" data-ru="Участок с утверждённым">Terreno con proyecto</span><br>
+      <em data-es="aprobado" data-en="building project" data-ru="проектом">aprobado</em>
+      <span data-es=" en Patagonia" data-en=" in Patagonia" data-ru=" в Патагонии"> en Patagonia</span>
+    </h1>
+    <p class="hero-sub" data-es="Barrio El Remanso, San Martin de los Andes. Listo para construir — con estudios de suelos, planos aprobados y proyecto de 104 m² mas galeria." data-en="Barrio El Remanso, San Martin de los Andes. Ready to build — with soil studies, approved plans, and a 104 m² house project plus veranda." data-ru="Район El Remanso, Сан-Мартин-де-лос-Андес. Готов к строительству — с геологическими изысканиями, утверждёнными планами и проектом дома 104 м² с верандой.">
+      Barrio El Remanso, San Martin de los Andes. Listo para construir — con estudios de suelos, planos aprobados y proyecto de 104 m² mas galeria.
+    </p>
+    <div class="hero-cta">
+      <a href="#galeria" class="btn btn-primary" data-es="Ver galeria" data-en="View gallery" data-ru="Смотреть галерею">Ver galeria</a>
+      <a href="#proyecto" class="btn btn-outline" data-es="Ver proyecto" data-en="View project" data-ru="Смотреть проект">Ver proyecto</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ VALUE BAR ════════ -->
+<div class="value-bar reveal">
+  <div class="container">
+    <div class="value-grid">
+      <div class="value-item">
+        <div class="value-icon">&#10003;</div>
+        <h3 data-es="Proyecto Aprobado" data-en="Approved Project" data-ru="Проект утверждён">Proyecto Aprobado</h3>
+        <p data-es="Planos municipales listos" data-en="Municipal plans ready" data-ru="Муниципальные планы готовы">Planos municipales listos</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">&#9997;</div>
+        <h3 data-es="Estudios Completos" data-en="Complete Studies" data-ru="Полные исследования">Estudios Completos</h3>
+        <p data-es="Suelos, efluentes, topografia" data-en="Soil, effluent, topography" data-ru="Грунт, стоки, топография">Suelos, efluentes, topografia</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">&#9881;</div>
+        <h3 data-es="Listo para Construir" data-en="Ready to Build" data-ru="Готов к стройке">Listo para Construir</h3>
+        <p data-es="Empeza manana mismo" data-en="Start building tomorrow" data-ru="Начните строить завтра">Empeza manana mismo</p>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">&#9633;</div>
+        <h3 data-es="104 m² + 10 m² galeria" data-en="104 m² + 10 m² veranda" data-ru="104 м² + 10 м² веранда">104 m² + 10 m² galeria</h3>
+        <p data-es="Casa con galeria incluida" data-en="House with veranda included" data-ru="Дом с верандой в проекте">Casa con galeria incluida</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ GALLERY ════════ -->
+<section id="galeria" class="reveal">
+  <div class="container">
+    <div class="section-label" data-es="Galeria" data-en="Gallery" data-ru="Галерея">Galeria</div>
+    <h2 class="section-title" data-es="El proyecto en <em>imagenes</em>" data-en="The project in <em>images</em>" data-ru="Проект в <em>фотографиях</em>">El proyecto en <em>imagenes</em></h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="Рендеры/Рендер фасад 1.jpeg" alt="Fachada principal" loading="lazy">
+        <div class="gallery-caption" data-es="Fachada principal" data-en="Main facade" data-ru="Главный фасад">Fachada principal</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="Рендеры/Рендер фасад 3.jpeg" alt="Vista lateral" loading="lazy">
+        <div class="gallery-caption" data-es="Vista lateral" data-en="Side view" data-ru="Боковой вид">Vista lateral</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="Рендеры/Рендер интерьер 1.jpeg" alt="Living comedor" loading="lazy">
+        <div class="gallery-caption" data-es="Living comedor" data-en="Living & dining room" data-ru="Гостиная-столовая">Living comedor</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="Рендеры/Рендер интерьер 2.jpeg" alt="Interior" loading="lazy">
+        <div class="gallery-caption" data-es="Interior" data-en="Interior" data-ru="Интерьер">Interior</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="Рендеры/Рендер интерьер 3.jpeg" alt="Cocina" loading="lazy">
+        <div class="gallery-caption" data-es="Cocina" data-en="Kitchen" data-ru="Кухня">Cocina</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PROPERTY SPECS ════════ -->
+<section id="terreno" class="reveal">
+  <div class="container">
+    <div class="section-label" data-es="El terreno" data-en="The land" data-ru="Участок">El terreno</div>
+    <h2 class="section-title" data-es="Datos del <em>lote</em>" data-en="Lot <em>specifications</em>" data-ru="Характеристики <em>участка</em>">Datos del <em>lote</em></h2>
+    <p class="section-desc" data-es="Ubicado en Barrio El Remanso, a minutos del aeropuerto Chapelco y sobre Ruta Nacional 40. Servicios subterraneos, bosque de pinos, sin expensas." data-en="Located in Barrio El Remanso, minutes from Chapelco Airport on Ruta Nacional 40. Underground utilities, pine forest, no HOA fees." data-ru="Расположен в районе El Remanso, в нескольких минутах от аэропорта Чапелько и на трассе Ruta Nacional 40. Подземные коммуникации, сосновый лес, без ежемесячных сборов.">
+      Ubicado en Barrio El Remanso, a minutos del aeropuerto Chapelco y sobre Ruta Nacional 40. Servicios subterraneos, bosque de pinos, sin expensas.
+    </p>
+
+    <div class="specs-grid">
+      <div class="spec-card">
+        <div class="spec-label" data-es="Orientacion" data-en="Orientation" data-ru="Ориентация">Orientacion</div>
+        <div class="spec-value" data-es="Norte" data-en="North" data-ru="Север">Norte</div>
+        <div class="spec-note" data-es="Maxima exposicion solar" data-en="Maximum sun exposure" data-ru="Максимальная инсоляция">Maxima exposicion solar</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label" data-es="Servicios" data-en="Utilities" data-ru="Коммуникации">Servicios</div>
+        <div class="spec-value" data-es="Subterraneos" data-en="Underground" data-ru="Подземные">Subterraneos</div>
+        <div class="spec-note" data-es="Electricidad, agua, gas proyectado" data-en="Electricity, water, projected gas" data-ru="Электричество, вода, газ (проект)">Electricidad, agua, gas proyectado</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label" data-es="Expensas" data-en="HOA fees" data-ru="Сборы ТСЖ">Expensas</div>
+        <div class="spec-value" data-es="Sin expensas" data-en="No HOA fees" data-ru="Без сборов">Sin expensas</div>
+        <div class="spec-note" data-es="Solo impuestos provinciales" data-en="Provincial taxes only" data-ru="Только провинциальные налоги">Solo impuestos provinciales</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label" data-es="Estado legal" data-en="Legal status" data-ru="Юр. статус">Estado legal</div>
+        <div class="spec-value" data-es="Escritura" data-en="Title deed" data-ru="Право собственности">Escritura</div>
+        <div class="spec-note" data-es="Titulo limpio, apto credito" data-en="Clean title, mortgage eligible" data-ru="Чистый титул, подходит для ипотеки">Titulo limpio, apto credito</div>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="map-embed">
+      <iframe src="https://maps.google.com/maps?q=-40.13811,-71.17189&z=15&t=k&output=embed" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="distances">
+      <div class="distance-item">
+        <div class="dist-icon">&#9992;</div>
+        <div class="dist-text">
+          <strong data-es="Aeropuerto Chapelco" data-en="Chapelco Airport" data-ru="Аэропорт Чапелько">Aeropuerto Chapelco</strong>
+          <span>5 min</span>
+        </div>
+      </div>
+      <div class="distance-item">
+        <div class="dist-icon">&#127960;</div>
+        <div class="dist-text">
+          <strong data-es="Centro SMA" data-en="SMA Downtown" data-ru="Центр города">Centro SMA</strong>
+          <span>20 min</span>
+        </div>
+      </div>
+      <div class="distance-item">
+        <div class="dist-icon">&#128739;</div>
+        <div class="dist-text">
+          <strong>Ruta Nacional 40</strong>
+          <span>400 m</span>
+        </div>
+      </div>
+      <div class="distance-item">
+        <div class="dist-icon">&#9975;</div>
+        <div class="dist-text">
+          <strong data-es="Cerro Chapelco" data-en="Chapelco Ski Resort" data-ru="Горнолыжный курорт Чапелько">Cerro Chapelco</strong>
+          <span>35 min</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PROJECT ════════ -->
+<section id="proyecto" class="project-section reveal">
+  <div class="container">
+    <div class="project-layout">
+      <div>
+        <div class="section-label" data-es="El proyecto" data-en="The project" data-ru="Проект">El proyecto</div>
+        <h2 class="section-title" data-es="Proyecto arquitectonico <em>aprobado</em>" data-en="Approved architectural <em>project</em>" data-ru="Утверждённый архитектурный <em>проект</em>">Proyecto arquitectonico <em>aprobado</em></h2>
+        <p class="section-desc" data-es="Todo lo que se necesita para empezar a construir ya esta listo. El proyecto cuenta con aprobacion municipal completa, lo que permite iniciar la obra inmediatamente despues de la escritura." data-en="Everything needed to start building is already done. The project has full municipal approval, allowing construction to begin immediately after closing." data-ru="Всё необходимое для начала строительства уже готово. Проект имеет полное муниципальное согласование, что позволяет начать стройку сразу после сделки.">
+          Todo lo que se necesita para empezar a construir ya esta listo. El proyecto cuenta con aprobacion municipal completa, lo que permite iniciar la obra inmediatamente despues de la escritura.
+        </p>
+
+        <ul class="check-list">
+          <li>
+            <div class="check-icon">&#10003;</div>
+            <div class="check-text">
+              <strong data-es="Planos arquitectonicos aprobados" data-en="Approved architectural plans" data-ru="Утверждённые архитектурные планы">Planos arquitectonicos aprobados</strong>
+              <span data-es="Visados por la Municipalidad de SMA y el Colegio de Arquitectos de Neuquen" data-en="Endorsed by the Municipality of SMA and the Neuquen Architects' Association" data-ru="Одобрены муниципалитетом SMA и Коллегией архитекторов Неукена">Visados por la Municipalidad de SMA y el Colegio de Arquitectos de Neuquen</span>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon">&#10003;</div>
+            <div class="check-text">
+              <strong data-es="Estudio de suelos" data-en="Soil study" data-ru="Геологическое исследование">Estudio de suelos</strong>
+              <span data-es="Analisis geotecnico completo para fundaciones" data-en="Complete geotechnical analysis for foundations" data-ru="Полный геотехнический анализ для фундамента">Analisis geotecnico completo para fundaciones</span>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon">&#10003;</div>
+            <div class="check-text">
+              <strong data-es="Estudio de efluentes" data-en="Effluent study" data-ru="Исследование стоков">Estudio de efluentes</strong>
+              <span data-es="Sistema de tratamiento aprobado" data-en="Approved treatment system" data-ru="Утверждённая система очистки">Sistema de tratamiento aprobado</span>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon">&#10003;</div>
+            <div class="check-text">
+              <strong data-es="Relevamiento topografico" data-en="Topographic survey" data-ru="Топографическая съёмка">Relevamiento topografico</strong>
+              <span data-es="Mensura y curvas de nivel del terreno" data-en="Survey and terrain contour lines" data-ru="Геодезия и горизонтали участка">Mensura y curvas de nivel del terreno</span>
+            </div>
+          </li>
+          <li>
+            <div class="check-icon">&#10003;</div>
+            <div class="check-text">
+              <strong data-es="Calculo estructural" data-en="Structural calculation" data-ru="Расчёт конструкций">Calculo estructural</strong>
+              <span data-es="Diseno de fundaciones y estructura resistente" data-en="Foundation and load-bearing structure design" data-ru="Проектирование фундаментов и несущих конструкций">Diseno de fundaciones y estructura resistente</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div onclick="openLightbox(this)" style="border-radius: 8px; overflow: hidden; margin-bottom: 24px; cursor: pointer;">
+          <img src="Рендеры/Рендер фасад 1.jpeg" alt="Render 3D del proyecto" style="width:100%; display:block;">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FLOOR PLAN ════════ -->
+<section class="floor-plan-section reveal">
+  <div class="container">
+    <div class="section-label" data-es="Plano" data-en="Floor plan" data-ru="Планировка">Plano</div>
+    <h2 class="section-title" data-es="Distribucion de la <em>vivienda</em>" data-en="Home <em>layout</em>" data-ru="Планировка <em>дома</em>">Distribucion de la <em>vivienda</em></h2>
+    <p class="section-desc" data-es="104 m² cubiertos mas 10 m² de galeria. 2 dormitorios, escritorio, living-comedor integrado, cocina y bano. Distribucion ideal para familias que trabajan en remoto." data-en="104 m² covered plus 10 m² veranda. 2 bedrooms, home office, integrated living-dining room, kitchen and bathroom. Ideal layout for remote-working families." data-ru="104 м² крытой площади плюс 10 м² веранда. 2 спальни, кабинет, объединённая гостиная-столовая, кухня и ванная. Идеальная планировка для семей на удалёнке.">
+      104 m² cubiertos mas 10 m² de galeria. 2 dormitorios, escritorio, living-comedor integrado, cocina y bano. Distribucion ideal para familias que trabajan en remoto.
+    </p>
+    <div class="floor-plan-wrapper" onclick="openLightbox(this)">
+      <img src="Рендеры/План.png" alt="Plano de planta">
+    </div>
+  </div>
+</section>
+
+<!-- ════════ BARRIO ════════ -->
+<section id="barrio" class="reveal">
+  <div class="container">
+    <div class="section-label" data-es="El barrio" data-en="The neighborhood" data-ru="Район">El barrio</div>
+    <h2 class="section-title" data-es="Barrio <em>El Remanso</em>" data-en="Barrio <em>El Remanso</em>" data-ru="Район <em>El Remanso</em>">Barrio <em>El Remanso</em></h2>
+    <p class="section-desc" data-es="Un barrio residencial dentro del ecosistema El Desafio Mountain Resort, con naturaleza, infraestructura y comunidad." data-en="A residential neighborhood within the El Desafio Mountain Resort ecosystem, offering nature, infrastructure, and community." data-ru="Жилой район в составе экосистемы El Desafio Mountain Resort — природа, инфраструктура и сообщество.">
+      Un barrio residencial dentro del ecosistema El Desafio Mountain Resort, con naturaleza, infraestructura y comunidad.
+    </p>
+
+    <div class="barrio-features">
+      <div class="barrio-card">
+        <h3 data-es="Naturaleza" data-en="Nature" data-ru="Природа">Naturaleza</h3>
+        <p data-es="Bosque de pinos y vistas a la Cordillera de los Andes. Reserva natural de 600 hectareas como vecina." data-en="Pine forest and views of the Andes Mountains. Adjacent 600-hectare nature reserve." data-ru="Сосновый лес и виды на Анды. Соседство с природным заповедником в 600 гектаров.">
+          Bosque de pinos y vistas a la Cordillera de los Andes. Reserva natural de 600 hectareas como vecina.
+        </p>
+      </div>
+      <div class="barrio-card">
+        <h3 data-es="Infraestructura" data-en="Infrastructure" data-ru="Инфраструктура">Infraestructura</h3>
+        <p data-es="Servicios subterraneos (electricidad, agua). Sin expensas mensuales — solo impuestos provinciales." data-en="Underground utilities (electricity, water). No monthly HOA fees — provincial taxes only." data-ru="Подземные коммуникации (электричество, вода). Без ежемесячных сборов — только провинциальные налоги.">
+          Servicios subterraneos (electricidad, agua). Sin expensas mensuales — solo impuestos provinciales.
+        </p>
+      </div>
+      <div class="barrio-card">
+        <h3 data-es="Comunidad" data-en="Community" data-ru="Сообщество">Comunidad</h3>
+        <p data-es="Asociado al ecosistema El Desafio: golf (Greg Norman), polo, gastronomia y naturaleza." data-en="Associated with the El Desafio ecosystem: golf (Greg Norman), polo, gastronomy, and nature." data-ru="Часть экосистемы El Desafio: гольф (Грег Норман), поло, гастрономия и природа.">
+          Asociado al ecosistema El Desafio: golf (Greg Norman), polo, gastronomia y naturaleza.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <div class="container">
+    <p>Barrio El Remanso — San Martin de los Andes, Neuquen, Argentina</p>
+  </div>
+</footer>
+
+<script>
+// ─── Language Toggle ───
+let currentLang = 'es';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+  });
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (val && el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') {
+      el.innerHTML = val;
+    }
+  });
+  document.querySelectorAll('[data-' + lang + '-placeholder]').forEach(el => {
+    el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
+  });
+  document.documentElement.lang = lang === 'ru' ? 'ru' : lang;
+}
+
+// ─── Sticky Nav ───
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+}, { passive: true });
+
+// ─── Mobile Menu ───
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('mobileOverlay').classList.toggle('show');
+}
+function closeMenu() {
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('mobileOverlay').classList.remove('show');
+}
+
+// ─── Scroll Reveal ───
+function revealElements() {
+  document.querySelectorAll('.reveal').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 60) {
+      el.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealElements, { passive: true });
+window.addEventListener('load', revealElements);
+revealElements();
+
+// ─── Smooth anchor scroll ───
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 60, behavior: 'smooth' });
+    }
+  });
+});
+
+// ─── Lightbox ───
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  if (!img) return;
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>
