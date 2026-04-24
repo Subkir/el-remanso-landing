@@ -96,26 +96,42 @@ a:hover { color: var(--accent-hover); }
 
 /* ─── HAMBURGER (mobile) ─── */
 .nav-hamburger {
-  display: none; background: none; border: none; cursor: pointer; padding: 4px;
+  display: none; background: none; border: none; cursor: pointer; padding: 8px;
+  z-index: 1002; position: relative;
 }
 .nav-hamburger span {
   display: block; width: 22px; height: 2px; background: var(--text-primary);
-  margin: 5px 0; transition: all 0.3s;
+  margin: 5px 0; transition: all 0.3s; transform-origin: center;
 }
+.nav-hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.active span:nth-child(2) { opacity: 0; }
+.nav-hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 @media (max-width: 768px) {
   .nav-hamburger { display: block; }
   .nav-links {
     position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
     background: var(--bg-secondary); flex-direction: column; justify-content: center;
     gap: 32px; transition: right 0.4s ease; padding: 40px;
-    box-shadow: -4px 0 30px rgba(0,0,0,0.5);
+    box-shadow: -4px 0 30px rgba(0,0,0,0.5); z-index: 1001;
   }
   .nav-links.open { right: 0; }
-  .nav-links a { font-size: 16px; }
+  .nav-links a { font-size: 18px; }
   .mobile-overlay {
-    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 998;
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1000;
   }
   .mobile-overlay.show { display: block; }
+  .hero h1 { font-size: clamp(32px, 8vw, 56px); }
+  .hero-sub { font-size: 15px; }
+  .section-title { font-size: clamp(28px, 6vw, 44px); }
+  .section-desc { font-size: 15px; }
+  .specs-grid { grid-template-columns: 1fr; }
+  .spec-card { padding: 24px 20px; }
+  .check-list li { padding: 16px; }
+  .barrio-features { grid-template-columns: 1fr; }
+  .map-embed { height: 300px; }
+  .savings-box .big-num { font-size: 36px; }
+  .floor-plan-wrapper { padding: 12px; }
 }
 
 /* ─── HERO ─── */
@@ -256,6 +272,7 @@ section { padding: var(--section-pad) 0; }
   position: relative; overflow: hidden; cursor: pointer;
 }
 .gallery-item:first-child { grid-row: 1 / -1; }
+.gallery-item:nth-child(6) { grid-column: 1 / -1; height: 350px; }
 .gallery-item img {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform 0.6s ease;
@@ -325,14 +342,14 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: cente
   .value-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
   .value-item:not(:last-child)::after { display: none; }
   .project-layout, .contact-layout { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px 220px; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px 200px 250px; }
   .gallery-item:first-child { grid-row: 1 / 2; }
-  .form-row { grid-template-columns: 1fr; }
-  .download-form { flex-direction: column; }
+  .gallery-item:nth-child(6) { grid-column: 1 / -1; height: 250px; }
 }
 @media (max-width: 480px) {
   .value-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: repeat(5, 220px); }
+  .gallery-grid { grid-template-columns: 1fr; grid-template-rows: repeat(6, 220px); }
+  .gallery-item:nth-child(6) { grid-column: 1; height: 220px; }
   .distances { grid-template-columns: 1fr; }
 }
 
@@ -457,6 +474,10 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: cente
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="Рендеры/Рендер интерьер 3.jpeg" alt="Cocina" loading="lazy">
         <div class="gallery-caption" data-es="Cocina" data-en="Kitchen" data-ru="Кухня">Cocina</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="Рендеры/Рендер фасад 4.jpeg" alt="Vista exterior" loading="lazy">
+        <div class="gallery-caption" data-es="Vista exterior" data-en="Exterior view" data-ru="Вид снаружи">Vista exterior</div>
       </div>
     </div>
   </div>
@@ -674,12 +695,24 @@ window.addEventListener('scroll', () => {
 
 // ─── Mobile Menu ───
 function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('open');
-  document.getElementById('mobileOverlay').classList.toggle('show');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('mobileOverlay');
+  const hamburger = document.querySelector('.nav-hamburger');
+  const isOpen = navLinks.classList.contains('open');
+  if (isOpen) {
+    closeMenu();
+  } else {
+    navLinks.classList.add('open');
+    overlay.classList.add('show');
+    hamburger.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 function closeMenu() {
   document.getElementById('navLinks').classList.remove('open');
   document.getElementById('mobileOverlay').classList.remove('show');
+  document.querySelector('.nav-hamburger').classList.remove('active');
+  document.body.style.overflow = '';
 }
 
 // ─── Scroll Reveal ───
